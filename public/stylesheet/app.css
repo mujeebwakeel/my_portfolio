@@ -1,0 +1,446 @@
+html {
+  scroll-behavior: smooth;
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	font: 1.6rem Helretica;
+	height: 100vh;
+  margin: 0;
+  position: relative;
+}
+  
+.grid-container {
+  position: relative;
+  z-index: 1;
+	display: grid;
+	grid-template-areas: "container" "main" "footer";
+	grid-template-columns: 1fr;
+	grid-template-rows: 100vh 1fr 5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+	grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    align-items: flex-start;
+}
+
+.screen-container {
+  grid-area: container;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+ 
+#screen {
+  width: 100%;
+  height: 100vh;
+}
+
+#screen-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+#screen-text #myname {
+  color: rgb(247, 140, 161);
+  font-weight: 800;
+} 
+
+#screenBtn {
+  border-radius: 10px;
+  outline: none;
+  background-color: teal;
+  cursor: pointer;
+  color: white;
+
+}
+
+#screenBtn a {
+  color: white;
+  text-decoration-line: none;
+}
+
+.footer {
+	grid-area: footer;
+	background-color: #203040;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+}
+
+.footer>span {
+  margin-right: 1rem;
+}
+
+.footer>span:last-child {
+  margin-right: 0;
+}
+
+#about-me, #recent-work, #languages {
+	margin: .5rem 1rem;
+	border: 2px solid blue;
+	padding: 0 10px;
+	border-radius: 10px;
+}
+
+#about-me {
+    flex: 1 1 25rem;
+}
+
+#recent-work {
+    flex: 3 1 50rem;
+    background-color: whitesmoke;
+}
+
+#languages {
+    flex: 1 1 25rem;
+}
+
+#languages {
+    word-wrap: break-word;
+}
+
+#languages ul {
+    padding: 0;
+    margin-left: 20px;
+    font-size: 1.5em;
+    margin-bottom: 2rem;
+}
+
+#languages ul li:hover {
+  color: rgb(54, 54, 238)
+}
+
+#shopping {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#camping {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+
+#gbale {
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#myself {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#myself img {
+    max-width: 100%;
+    max-height: 700px;
+    border-radius: 15px;
+
+}
+
+#contact {
+    text-align: center;
+}
+
+#name, #email, #message {
+    width: 100%;
+    margin-bottom: .5rem;
+} 
+
+.preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview>img {
+    max-height: 220px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .form-control {
+      background: #1a1a1a;
+      color: white;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+  #camp {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+  }
+
+  #camp>img {
+    max-height: 220px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+  
+  #camp:hover .overlay {
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .overlay img {
+    max-height: 220px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  /* image sliding */
+  .slider {
+    width: 400px;
+    height: 220px;
+    border-radius: 10px;
+    background-color: yellow;
+    margin-bottom: 1rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .image-container {
+    width: 1200px;
+    background-color: pink;
+    height: 220px;
+    clear: both;
+    position: relative;
+    -webkit-transition: left 1s;
+    -moz-transition: left 1s;
+    -o-transition: left 1s;
+    transition: left 1s;
+  }
+
+  .slide {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+  }
+
+  #slide-1:target ~ .image-container {
+    left: 0px;
+  }
+  #slide-2:target ~ .image-container {
+    left: -400px;
+  }
+  #slide-3:target ~ .image-container {
+    left: -800px;
+  }
+
+  .buttons {
+    position: relative;
+    top: -20px;
+  }
+  .buttons a {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background-color: orange;
+  }
+
+  .slider2 {
+    width: 400px;
+    height: 220px;
+    border-radius: 10px;
+    background-color: yellow;
+    margin-bottom: 1rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .image-container {
+    width: 1200px;
+    background-color: pink;
+    height: 220px;
+    clear: both;
+    position: relative;
+    -webkit-transition: left 1s;
+    -moz-transition: left 1s;
+    -o-transition: left 1s;
+    transition: left 1s;
+  }
+
+  .slide2 {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+  }
+
+  #slide2-1:target ~ .image-container {
+    left: 0px;
+  }
+  #slide2-2:target ~ .image-container {
+    left: -400px;
+  }
+  #slide2-3:target ~ .image-container {
+    left: -800px;
+  }
+
+  /* return to homescreen button */
+  .preview .over {
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(100, 100, 212);
+    overflow: hidden;
+    width: 0;
+    height: 220px;
+    transition: .5s ease;
+  }
+  
+  .preview:hover .over {
+    width: 100%;
+  }
+  
+  .text {
+    white-space: nowrap; 
+    color: red;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  /* table for portfolio messages */
+  .table {
+    width: 100%;
+  }
+  
+  thead>tr {
+    background-color: beige;
+    text-align: center;
+  }
+  
+  tr, thead>tr>th {
+    text-align: center;
+  }
+  
+  tbody>tr:nth-child(odd) {
+    background-color: aquamarine;
+  }
+  
+  tbody>tr:nth-child(even) {
+    background-color: rgb(241, 211, 76);
+  }
+  
+  .booking-list {
+    margin-top: 1rem;
+  }
