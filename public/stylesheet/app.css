@@ -463,7 +463,7 @@ img {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+  .text {font-size: 15px}
 }
 
 /* down arrow animation*/
@@ -534,6 +534,11 @@ img {
   justify-content: space-between;
   align-items: center;
   color: white;
+  margin-right: 1rem;
+}
+
+.lang>span:last-child {
+  margin-right: 0;
 }
 
 .lang span:hover{
