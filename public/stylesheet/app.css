@@ -535,7 +535,11 @@ img {
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.lang>span {
   margin-right: 1rem;
+
 }
 
 .lang>span:last-child {
