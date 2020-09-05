@@ -79,6 +79,6 @@ app.get("*", function(req,res) {
     res.send("No such url exists on this server");
 })
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(port, process.env.IP, function(){
     console.log("Server has started");
 });
