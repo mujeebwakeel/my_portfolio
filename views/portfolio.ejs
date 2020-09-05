@@ -10,58 +10,213 @@
     <link rel="apple-touch-icon" href="/img/whykaycraft.ico" />
 </head>
 <body>
-    
-    <% if(error && error.length > 0){ %>
-        <div class="alert alert-danger" role="alert">
-              <p><%= error %></p>
-        </div>
-        <% } %>
-        <% if(success && success.length > 0){ %>
-        <div class="alert alert-success" role="alert">
-              <p><%= success %></p>
-        </div>
-        <% } %>
-    <div class="grid-container">
-        <div class="screen-container" id="section1">
-            <img id="screen" src="/img/coder.jpg" alt="screen">
-            <div id="screen-text">
-                <div >Hi, I am <span id="myname">Wakeel Mujeeb</span></div> 
-                <div>I am a full-stack web developer</div>
-                <div>I love to solve problems</div>
-                <a href="#section2"><button id="screenBtn">Check my work</button></a>
+    <nav class="navbar navbar-default navbar-fixed-top"> 
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#adex" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"> <img style="width: 2rem; height: 2rem; display: inline-block;" src="/img/whykaycraft.ico" alt="icon"> WhykayCraft</a>
+            </div>
+            <div class="collapse navbar-collapse" id="adex">
+                    <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                    </ul>
             </div>
         </div>
-        <div class="main">
-            <div id="about-me">
-                <h3>About me </h3>
+</nav>
+    <% if(error && error.length > 0){ %>
+    <div class="alert alert-danger" role="alert">
+        <p><%= error %></p>
+    </div>
+    <% } %>
+    <% if(success && success.length > 0){ %>
+    <div class="alert alert-success" role="alert">
+        <p><%= success %></p>
+    </div>
+    <% } %>
+    
+    <div class="grid-container">
+        <div id="home" class="home">
+            <img id="screen" src="/img/coder.jpg" alt="screen">
+            <div id="screen-text">
+                <div >Hi, I am <span class="myname">Wakeel Mujeeb</span></div> 
+                <div>I am a full-stack web developer</div>
+                <br>
+                <a href="#about"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        <div id="about" class="about">
+            <div style="max-width:70rem; width:90%; margin:10px auto;">
+                <h2 style="text-align: center;"><strong>About me</strong></h2>
                 <div id="myself">
                     <img id="myImg" alt="Wakeel, Mujeeb Adeyinka" src="/img/myself.jpg" alt="whykay">
                     <div id="myModal" class="modal">
                         <span class="close">&times;</span>
                         <img class="modal-content" id="img01">
                         <div id="caption"></div>
-                        </div>
+                    </div>
                 </div>
-                <div id="description">
-                    <ul>
-                        <li> My name is Wakeel Mujeeb Adeyinka, an enthusiastic web developer. I am into front-end and back-end development.</li>
-                        <li>I have a degree in Chemistry with a First Class. I am very diligent in all I do.</li>
-                        <li>I find web development very interesting because it is a problem solving skill.</li>
-                        <li>I acquired this skill as a result of my passion for it and this I achieved via Udemy Academy tutorial videos and lots of online resources.</li>
-                        <li>I am proud to be a web developer because it is what I love to do.</li>
-                        <li>I am a trustworthy and dependable individual.</li>
-                    </ul>
+                <h3 style="text-align: center;">Full-Stack Web Developer</h3>
+                <div class="description">
+                    <div class="desc1">I am Wakeel Mujeeb Adeyinka, an enthusiastic web developer. I am into front-end and back-end development.
+                        I have a degree in Chemistry with a First Class. I am very diligent in all I do.
+                    </div>
+                    <div class="desc2">
+                        <div><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <strong>Phone</strong>: +234 8169392279</div>
+                        <div><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <strong>City</strong>: Osun, Nigeria</div>
+                        <div><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <strong>Degree</strong>: Bachelor of Science</div>
+                        <div><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <strong>Email</strong>: wakeelmujeeb@yahoo.com</div>
+                        <div><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <strong>Freelance</strong>: Available</div>
+                    </div>
                 </div>
-                <div id="github">
-                    Check my GitHub <a href="https://github.com/mujeebwakeel">repo</a> for my source code.
+                
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="/img/camp5.jpg" style="width:100%">
+                      <div class="text">whykay camp</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="/img/house4.jpg" style="width:100%">
+                      <div class="text">gbale</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="/img/shoe5.jpg" style="width:100%">
+                      <div class="text">whykay fashion</div>
+                    </div>
+                    
                 </div>
-                <div id="contact">
-                    <h3>Contact</h3>
-                    <a href="mailto:wakeelmujeeb@gmail.com?subject=My%20Portfolio%20Chat">wakeelmujeeb@gmail.com</a>
+                    <br>
+                    
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
                 </div>
-                    <hr>
-                <div style="text-align: center;">Let's work together</div>
-                <div id=>
+            </div>
+            <div style="text-align: center;">
+                <a href="#portfolio"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a>
+            </div>
+                
+        </div>
+                
+        <div id="portfolio" class="portfolio">
+            <h2 style="text-align: center;"> <strong>Recent works</strong></h2>
+            <div class="container">
+                <div class ="text-center" style="display:flex; flex-wrap: wrap;">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="https://res.cloudinary.com/wakeelmujeeb/image/upload/v1598825401/a4klikmi0hpd9dwhremo.jpg">
+                            <div class="overlay">
+                                <div class="text-overlay">Web 1</div>
+                                <div class="more-info"><a href="https://whykaycamp.herokuapp.com">More Info</a></div>
+                            </div>
+                        </div> 
+                    </div>    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="https://res.cloudinary.com/wakeelmujeeb/image/upload/v1598824491/gxaclae4imgbgcuh8uxh.jpg">
+                            <div class="overlay">
+                                <div class="text-overlay">Web 1</div>
+                                <div class="more-info"><a href="https://whykaycamp.herokuapp.com">More Info</a></div>
+                            </div>
+                        </div> 
+                    </div>    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="https://res.cloudinary.com/wakeelmujeeb/image/upload/v1598824858/kzskzyrv3dftdetjzqkr.jpg">
+                            <div class="overlay">
+                                <div class="text-overlay">Web 1</div>
+                                <div class="more-info"><a href="https://whykaycamp.herokuapp.com">More Info</a></div>
+                            </div>
+                        </div> 
+                    </div>  
+                    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="https://res.cloudinary.com/wakeelmujeeb/image/upload/v1598812372/slippers5_u44gsj.jpg">
+                            <div class="overlay">
+                                <div class="text-overlay">Web 2</div>
+                                <div class="more-info"><a href="https://whykay.herokuapp.com">More Info</a></div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="https://res.cloudinary.com/wakeelmujeeb/image/upload/v1598808974/sneakers1_woey5r.jpg">
+                            <div class="overlay">
+                                <div class="text-overlay">Web 2</div>
+                                <div class="more-info"><a href="https://whykay.herokuapp.com">More Info</a></div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="https://res.cloudinary.com/wakeelmujeeb/image/upload/v1598808856/watch5_nrt446.jpg">
+                            <div class="overlay">
+                                <div class="text-overlay">Web 2</div>
+                                <div class="more-info"><a href="https://whykay.herokuapp.com">More Info</a></div>
+                            </div>
+                        </div> 
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="/img/house2.jpg">
+                            <div class="overlay">
+                                <div class="text-overlay">Web 3</div>
+                                <div class="more-info"><a href="https://gbaletrack.herokuapp.com">More Info</a></div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="/img/house4.jpg">
+                            <div class="overlay">
+                                <div class="text-overlay">Web 3</div>
+                                <div class="more-info"><a href="https://gbaletrack.herokuapp.com">More Info</a></div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="/img/house5.jpg">
+                            <div class="overlay">
+                                <div class="text-overlay">Web 3</div>
+                                <div class="more-info"><a href="https://gbaletrack.herokuapp.com">More Info</a></div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="lang">
+                        <span><strong>HTML</strong></span> <span><strong>CSS</strong></span> <span><strong>JavaScript</strong></span> <span><strong>React.js</strong></span> <span><strong>Redux</strong></span> <span><strong>Bootstrap</strong></span> <span><strong>jQuery</strong></span> 
+                </div> 
+            </div>
+            <div style="text-align: center;">
+                <a href="#contact"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        <div id="contact" class="contact">
+            <div style="max-width:40rem; width:90%; margin:10px auto;">
+                <h2><strong> Contact</strong></h2>
+                <a href="mailto:wakeelmujeeb@gmail.com?subject=My%20Portfolio%20Chat">wakeelmujeeb@gmail.com</a>
+                <hr>
+                <h3 style="text-align: center;">Let's work together</h3>
+                <div id="form">
                     <form action="/contact" method="POST">
                         <div class="form-group" id="name">
                             <input class="form-control" type="text" name="name" placeholder="Your name" required>
@@ -81,121 +236,22 @@
                     </form>
                 </div>
             </div>
-            <div class="recent-work" id="section2">
-                <h3>Recent works</h3> 
-                <div id="shopping">
-                    <h4>Fashion Shopping Site  <a href="https://whykay.herokuapp.com">here...</a> </h4>
-                    <div>What the site does:</div>
-                    <ul>
-                        <li>It is an e-commerce website that deals in wears</li>
-                        <li>Users can place their orders on the site</li>
-                        <li>Users can make payment upon order via paypal</li>
-                        <li>The website generates receipt for customers after an order has been placed</li>
-                        <li>All orders and payment made on the site are saved and tracked</li>
-                    </ul>
-                    <div>Languages and Frameworks employed</div>
-                    <ul>
-                        <li>HTML, CSS, Javascript, Node.js, React.js, Redux, and jQuery</li>
-                    </ul>
-                </div>
-                <div id="camping">
-                    <h4>Camp Stations Booking Site <a href="https://whykaycamp.herokuapp.com">here...</a></h4>
-                    <div>What the site does:</div>
-                    <ul>
-                        <li>It is a camping site that showcases different camp stations</li>
-                        <li>Users are allowed to view and comment on the camp stations</li>
-                        <li>Users can book some dates to spend some night away from their home</li>
-                        <li>Payment is also made available on the site</li>
-                        <li>Already picked dates are disabled in every camp station's calendar</li>
-                    </ul>
-                    <div>Languages and Frameworks employed</div>
-                    <ul>
-                        <li>HTML, CSS, Javascript, Node.js, Bootstrap, and jQuery</li>
-                    </ul>
-                </div>
-                <div id="gbale">
-                    <h4>Gbale Customer Tracking Site <a href="https://gbaletrack.herokuapp.com">here...</a></h4>
-                    <div>What the site does:</div>
-                    <ul>
-                        <li>It is a site for office use only</li>
-                        <li>Gbale is a start-up company that deals in renting house to tenants</li>
-                        <li>Customers seeking accommodation are registerd on the site</li>
-                        <li>Gbale keeps record of how fast every customer is attended to</li>
-                        <li>This is achieved with a notification that changes color for each registered customer after every 24hrs for a period of 3days</li>
-                    </ul>
-                    <div>Languages and Frameworks employed</div>
-                    <ul>
-                        <li>HTML, CSS, Javascript, Node.js and Bootstrap</li>
-                    </ul>
-                </div>
-                <hr>
-                <div id="camp">
-                    <img src="/img/camp.jpg" alt="preview">
-                    <div class="overlay">
-                        <img src="/img/camp2.jpg" alt="preview" >
-                    </div>
-                </div>
-                
+            <div style="text-align: center;">
+                <a href="#home"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
             </div>
-
-            <div id="languages">
-                <h3>Languages and Frameworks</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>Node.js</li>
-                    <li>jQuery</li>
-                    <li>React.js</li>
-                    <li>Bootstrap</li>
-                    <li>Redux</li>
-                </ul>
-                <div class="slider">
-                    <span id="slide-1"></span>
-                    <span id="slide-2"></span>
-                    <span id="slide-3"></span>
-                    <div class="image-container">
-                        <img src="/img/camp2.jpg" class="slide" width="400" height="220" />
-                        <img src="/img/camp3.jpg" class="slide" width="400" height="220" />
-                        <img src="/img/camp4.jpg" class="slide" width="400" height="220" />
-                      </div>
-                      <div class="buttons">
-                        <a href="#slide-1"></a>
-                        <a href="#slide-2"></a>
-                        <a href="#slide-3"></a>
-                      </div>
-                </div>
-                <div class="slider2">
-                    <span id="slide2-1"></span>
-                    <span id="slide2-2"></span>
-                    <span id="slide2-3"></span>
-                    <div class="image-container">
-                        <img src="/img/fashion3.jpg" class="slide2" width="400" height="220" />
-                        <img src="/img/fashion.jpg" class="slide2" width="400" height="220" />
-                        <img src="/img/fashion2.jpg" class="slide2" width="400" height="220" />
-                      </div>
-                      <div class="buttons">
-                        <a href="#slide2-1"></a>
-                        <a href="#slide2-2"></a>
-                        <a href="#slide2-3"></a>
-                      </div>
-                </div>
-                <div class="preview">
-                    <img src="/img/fashion4.jpg" alt="preview">
-                    <div class="over">
-                        <a href="#section1" class="text"><button>Home Screen</button></a>
-                    </div>
-                </div>
+        </div>            
                 
-            </div>
-        </div>
         <div class="footer">
             <span>&#169;2020 Whykay&#8482;</span>
             <span ><a href="https://wa.me/2348169392279"><img src="/img/whatsApp.jpg" alt="whatsApp" width="20" height="20"></a></span>
             <span ><a href="https://www.facebook.com/wakeel.mujeeb"><img src="/img/facebook.jpg" alt="facebook" width="20" height="20"></a></span>
+            <span ><a href="https://github.com/mujeebwakeel">Github</a></span>
         </div>
     </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="/script/screen.js"></script>
+<script src="/script/slideshow.js"></script>
 </body>
 </html>

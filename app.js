@@ -65,22 +65,20 @@ app.get("/chat", function(req,res) {
     })
 })
 
-app.get("/message", function(req,res) {
-    Message.find({}, function(err, foundMessages) {
-        if(err || !foundMessages) {
-            return res.send("Hoops");
-        }
-        res.send(foundMessages)
+// app.get("/message", function(req,res) {
+//     Message.deleteMany({}, function(err, foundMessages) {
+//         if(err || !foundMessages) {
+//             return res.send("Hoops");
+//         }
+//         res.send("Deleted")
 
-    })
-})
-
-
+//     })
+// })
 
 app.get("*", function(req,res) {
     res.send("No such url exists on this server");
 })
 
-app.listen(port, process.env.IP, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Server has started");
 });
