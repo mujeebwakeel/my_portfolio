@@ -439,6 +439,10 @@ img {
   background-color: #717171;
 }
 
+.selected {
+  background-color: rgb(197, 141, 21);
+}
+
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -526,6 +530,18 @@ img {
 
 .more-info a {
   color: white;
+}
+
+.text-middle {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  
 }
 
 .lang {     
