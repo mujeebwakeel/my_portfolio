@@ -627,21 +627,21 @@ img {
 
 .glyphicon-chevron-down {
   -webkit-animation-name: transform;
-  -webkit-animation-duration: 1.0s;
+  -webkit-animation-duration: 1.5s;
   animation-name: transform;
-  animation-duration: 1.0s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
 
 }
 
 @-webkit-keyframes transform {
   from {font-size: 3rem; color: white} 
-  to {font-size: 4rem; color: red}
+  to {font-size: 3.2rem; color: red}
 }
 
 @keyframes transform {
   from {font-size: 3rem; color: white} 
-  to {font-size: 4rem; color: red}
+  to {font-size: 3.2rem; color: red}
 }
 
 .glyphicon-chevron-up {
